@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/imgPath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:outlineProvider="bounds"
+        android:hint="@string/image_path" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="selectImage"
+        android:textSize="18sp"
+        android:background="#7A4FC6"
+        android:text="Select Image"
+        app:icon="@drawable/ic_add"
+        android:layout_marginBottom="10dp"
+        style="@style/Widget.MaterialComponents.Button.Icon"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="@string/ipv4_address" />
+
+        <EditText
+            android:id="@+id/IPAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:text="@string/host_url" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="@string/port_number" />
+
+        <EditText
+            android:id="@+id/portNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:text="@string/host_end_point" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="connectServer"
+        android:textSize="18sp"
+        android:background="#7A4FC6"
+        android:text="@string/connect_to_server"
+        android:textColor="#fff"
+        app:icon="@drawable/ic_wifi"
+        android:layout_marginBottom="10dp"
+        style="@style/Widget.MaterialComponents.Button.Icon"/>
+
+
+    <TextView
+        android:id="@+id/responseText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#504545"
+        android:text="@string/message_from_the_server" />
+
+    <ImageView
+        android:id="@+id/imageCome"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"/>
+
+</LinearLayout>
